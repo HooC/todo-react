@@ -1,9 +1,10 @@
 const inicialState = []
 
-const reducer = (state = [], action) => {
+const reducer = (state = inicialState, action) => {
     
     switch(action.type) {
         case ("ADD_NEW") :
+            console.log(action.payload)
             return [...state, {id: state.length !== 0 ? state[state.length - 1].id + 1 : 0, name: action.payload, check: false}];
             break;
         case ("REMOVE_ITEM") :

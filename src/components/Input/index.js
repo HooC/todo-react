@@ -17,7 +17,8 @@ const mapDispatchToProps = (dispatch) => {
 
 class Input extends Component {
 
-    addNew() {
+    addNew(e) {
+        e.preventDefault();
         this.props.onAddNewVal(this.input.value);
         this.input.value = '';
     }
